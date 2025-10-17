@@ -336,3 +336,262 @@
     font-size: 1.5rem;
   }
 }
+
+.events, .success-stories {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.events-grid, .stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.event-card, .story-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.event-card:hover, .story-card:hover {
+  transform: translateY(-5px);
+}
+
+.story-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.event-date {
+  font-weight: bold;
+  color: #444;
+}
+/* ------------------ Upcoming Events & Success Stories ------------------ */
+
+.events,
+.success-stories {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #e2e8f0;
+}
+
+.events .section-title,
+.success-stories .section-title {
+  color: #00d9ff;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.events-grid,
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Event Cards */
+.event-card {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  border-color: #00d9ff;
+  box-shadow: 0 8px 25px rgba(0, 217, 255, 0.2);
+}
+
+.event-card h3 {
+  color: #00d9ff;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.event-date {
+  font-weight: 600;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.event-desc {
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Success Story Cards */
+.story-card {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+  border-color: #00d9ff;
+  box-shadow: 0 8px 25px rgba(0, 217, 255, 0.2);
+}
+
+.story-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(0, 217, 255, 0.2);
+}
+
+.story-card h3 {
+  color: #00d9ff;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.story-card p {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+/* Buttons inside events/stories */
+.events .btn-secondary,
+.success-stories .btn-secondary {
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .events,
+  .success-stories {
+    padding: 2rem 1rem;
+  }
+
+  .events-grid,
+  .stories-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .events .section-title,
+  .success-stories .section-title {
+    font-size: 2rem;
+  }
+
+  .event-card,
+  .story-card {
+    padding: 1.5rem;
+  }
+}
+
+/* ======================= BUTTON RESPONSIVENESS FIX ======================= */
+
+/* General fix: make long buttons wrap text and scale better */
+.btn {
+  white-space: normal; /* allow text wrapping */
+  text-align: center;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Slightly reduce padding on smaller screens */
+@media (max-width: 768px) {
+  .btn {
+    padding: 0.65rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  /* Fix event & story buttons as well */
+  .events .btn,
+  .success-stories .btn {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  /* Prevent text overflow inside cards */
+  .event-card,
+  .story-card {
+    word-wrap: break-word;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .btn-large {
+    width: 100%;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+  }
+}
+
+/* ======================= RESPONSIVE CARD GRID IMPROVEMENT ======================= */
+
+/* For medium-small screens (like tablets and large phones): 
+   show 2 cards per row */
+@media (max-width: 768px) and (min-width: 500px) {
+  .features-grid,
+  .events-grid,
+  .stories-grid,
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Center align the odd card if grid has 3 cards (like events/stories) */
+  .events-grid > :nth-child(3),
+  .stories-grid > :nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 80%;
+  }
+}
+
+/* For very small screens (phones): keep 1 card per row, full width */
+@media (max-width: 500px) {
+  .features-grid,
+  .events-grid,
+  .stories-grid,
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .events-grid > :nth-child(3),
+  .stories-grid > :nth-child(3) {
+    max-width: 100%;
+  }
+}
+
+

@@ -72,6 +72,89 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Upcoming Events Section */}
+      <section className="events">
+        <h2 className="section-title">Upcoming Events</h2>
+        <div className="events-grid">
+          <div className="event-card">
+            <h3>🔥 CAD Design Challenge</h3>
+            <p className="event-date">Date: October 28, 2025</p>
+            <p className="event-desc">
+              Showcase your CAD modeling skills and compete to design the most
+              efficient mechanical component.
+            </p>
+            <Link to="/events" className="btn btn-secondary">
+              Know More
+            </Link>
+          </div>
+          <div className="event-card">
+            <h3>⚙️ Workshop on Robotics & Automation</h3>
+            <p className="event-date">Date: November 10, 2025</p>
+            <p className="event-desc">
+              Dive into the world of robotics and automation with hands-on
+              training by industry experts.
+            </p>
+            <Link to="/events" className="btn btn-secondary">
+              Register Now
+            </Link>
+          </div>
+          <div className="event-card">
+            <h3>🚀 MechESA Annual Tech Fest</h3>
+            <p className="event-date">Date: December 5–7, 2025</p>
+            <p className="event-desc">
+              A 3-day celebration of innovation, technology, and engineering
+              excellence at IIT Indore.
+            </p>
+            <Link to="/events" className="btn btn-secondary">
+              View Details
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Success Stories Section */}
+      <section className="success-stories">
+        <h2 className="section-title">Success Stories</h2>
+        <div className="stories-grid">
+          <div className="story-card">
+            <img
+              src="https://via.placeholder.com/300x180"
+              alt="Success Story"
+              className="story-img"
+            />
+            <h3>🏅 SAE Team Victory</h3>
+            <p>
+              Our team secured 1st place in the National SAE Design Challenge,
+              proving MechESA’s commitment to innovation and teamwork.
+            </p>
+          </div>
+          <div className="story-card">
+            <img
+              src="https://via.placeholder.com/300x180"
+              alt="Success Story"
+              className="story-img"
+            />
+            <h3>🔬 Research Publication</h3>
+            <p>
+              MechESA members published a paper on sustainable manufacturing in
+              the ASME Journal of Mechanical Design.
+            </p>
+          </div>
+          <div className="story-card">
+            <img
+              src="https://via.placeholder.com/300x180"
+              alt="Success Story"
+              className="story-img"
+            />
+            <h3>🤖 Robotics Excellence</h3>
+            <p>
+              Team RoboMech built an autonomous robot that won the “Best Design”
+              award at the Fluxus TechFest.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Stats Section */}
       <section className="stats">
         <div className="stat-item">
