@@ -34,32 +34,54 @@ A modern, responsive website for the MechEsa Club - the premier mechanical engin
 
 ```
 mechesa-club-website/
-├── app/                    # Next.js app directory
-│   ├── about/             # About page
-│   ├── events/            # Events page
-│   ├── gallery/           # Gallery page
-│   ├── team/              # Team page
-│   ├── contact/           # Contact page
-│   ├── globals.css        # Global styles
-│   ├── layout.tsx         # Root layout
-│   └── page.tsx           # Home page
-├── components/            # Reusable components
-│   ├── ui/               # UI components (shadcn/ui)
-│   ├── Hero.tsx          # Hero section
-│   ├── Navbar.tsx        # Navigation bar
-│   ├── Footer.tsx        # Footer
-│   └── ...               # Other components
-├── data/                 # Static data files
-│   ├── events.ts         # Events data
-│   ├── gallery.ts        # Gallery data
-│   └── team.ts           # Team data
-├── lib/                  # Utility functions
-├── backend/              # Backend API
-│   ├── routes/           # API routes
-│   ├── models/           # Database models
-│   ├── middleware/       # Custom middleware
-│   └── server.js         # Express server
-└── public/               # Static assets
+├── public/                         # Static assets (images, icons, etc.)
+│   ├── favicon.ico
+│   └── assets/
+│       ├── gallery/
+│       ├── events/
+│       └── team/
+├── src/
+│   ├── components/                 # Reusable components
+│   │   ├── ui/                     # UI components (buttons, cards, etc.)
+│   │   ├── Hero.jsx                # Hero section
+│   │   ├── Navbar.jsx              # Navigation bar
+│   │   ├── Footer.jsx              # Footer
+│   │   └── ...                     # Other reusable components
+│   │
+│   ├── pages/                      # Page components (replaces Next.js app directory)
+│   │   ├── Home.jsx
+│   │   ├── About.jsx
+│   │   ├── Events.jsx
+│   │   ├── Gallery.jsx
+│   │   ├── Team.jsx
+│   │   └── Contact.jsx
+│   │
+│   ├── data/                       # Static data (JSON or JS exports)
+│   │   ├── events.js
+│   │   ├── gallery.js
+│   │   └── team.js
+│   │
+│   ├── lib/                        # Utility/helper functions
+│   │   └── utils.js
+│   │
+│   ├── backend/                    # Express backend (optional if using full-stack)
+│   │   ├── routes/
+│   │   ├── models/
+│   │   ├── middleware/
+│   │   └── server.js
+│   │
+│   ├── styles/                     # CSS and global styles
+│   │   ├── globals.css
+│   │   └── variables.css
+│   │
+│   ├── App.jsx                     # Main React component
+│   ├── main.jsx                    # Entry point (Vite) / index.js (CRA)
+│   └── router.jsx                  # React Router configuration
+│
+├── package.json
+├── vite.config.js / webpack.config.js
+├── README.md
+└── .gitignore
 ```
 
 ## 🚀 Getting Started
