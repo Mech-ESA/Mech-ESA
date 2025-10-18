@@ -4,6 +4,16 @@
   padding: 2rem;
   text-align: center;
 }
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+}
+
+
 
 .logo {
   height: 6em;
